@@ -93,6 +93,39 @@
           }
         }
       }
+    },
+    "data-transfer": {
+      "projectType": "library",
+      "root": "projects/data-transfer",
+      "sourceRoot": "projects/data-transfer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/data-transfer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/data-transfer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/data-transfer/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

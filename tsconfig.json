@@ -3,6 +3,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "data-transfer": [
+        "./dist/data-transfer"
+      ]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -29,6 +34,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/data-transfer/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/data-transfer/tsconfig.spec.json"
     }
   ]
 }
